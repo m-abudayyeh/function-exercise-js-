@@ -1,11 +1,16 @@
-// Q1
-
-// function Rev_num(x) {
-//     let num = x.toString().split('').reverse().join('');
-//     return parseInt(num, 10); 
+ // Q1
+// function reverse_num(num){
+//     let num_rev=0;
+//   while(num) {
+//     num_rev=num_rev*10 +(num%10);
+//     num = Math.floor(num/10);
+//   } 
+//   return num_rev ; 
 // }
 
-// console.log(Rev_num(532443)); 
+// let x = 532443 ;
+// console.log(reverse_num(x));
+
 
 // Q2
 // for(let a=0 ;a<=15 ; a++){
@@ -17,67 +22,51 @@
 //     }
 // }
 
+
+
 // Q3
-// bulit in function 
-// function alphabetical_order(word){
-//     let letters=word.split('').sort().join('');
-// return(letters)
-// }
-// console.log(alphabetical_order("orange"));
+// function sortAscending(str) {
+//     var letters = "abcdefghijklmnopqrstuvwxyz";
+//     var x = "";
 
-// using for loops 
-// function alphabetical_order(word) {
-//     let letters = [];
-//     for (let i = 0; i < word.length; i++) {
-//         letters.push(word[i]);
-//     }
-
-//     for (let i = 0; i < letters.length; i++) {
-//         for (let j = i + 1; j < letters.length; j++) {
-//             if (letters[i] > letters[j]) {
-//                 let temp = letters[i];
-//                 letters[i] = letters[j];
-//                 letters[j] = temp;
+//     for (var i = 0; i < letters.length; i++) {
+//         for (var j = 0; j < str.length; j++) {
+//             if (str[j].toLowerCase() === letters[i]) {
+//                 x += str[j];
 //             }
 //         }
 //     }
-//     let result = '';
-//     for (let i = 0; i < letters.length; i++) {
-//         result += letters[i];
-//     }
 
-//     return result;
+//     return x;
 // }
 
-// console.log(alphabetical_order("orange"));
+
 
 // Q4
-// function insertDashes(number) {
+// function Dashe_Bet_even(num){
+//     let result = " ";
+//     num= num+ " " ;
 
-//     let numStr = number.toString();
-//     let result = numStr[0]; 
-
-//     for (let i = 1; i < numStr.length; i++) {
-//         if (parseInt(numStr[i]) % 2 === 0 && parseInt(numStr[i - 1]) % 2 === 0) {
-//             result += '-'; 
+//     for( let a=0 ;a<num.length ;a++){
+//         if (a>0 && num[a]%2===0 &  num[a-1]%2===0 ){
+//             result+= "-"
 //         }
-//         result += numStr[i]; 
+//         result+=num[a];
 //     }
-
-//     return result;
+//     return result ;
 // }
+// let input = 25468;
+// console.log ( Dashe_Bet_even(input));
 
-// console.log(insertDashes("025468"));
 
 // Q5
+let age = parseInt (prompt("please enter your age"));
 
-// let age = parseInt (prompt("please enter your age"));
-
-// function AgeChecker(age) {
-//     if (age >= 18) {
-//         console.log("The user is an adult");
-//     } else {
-//         console.log("The user is a minor");
-//     }
-// }
-// AgeChecker(age); 
+function AgeChecker(age) {
+    if (age >= 18) {
+        console.log("The user is an adult");
+    } else {
+        console.log("The user is a minor");
+    }
+}
+AgeChecker(age); 
